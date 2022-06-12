@@ -4,6 +4,7 @@ import Board from "./components/board/index.vue";
 </script>
 <template>
   <h1>Snake</h1>
+  <button>Start</button>
   <Statistics />
   <Board />
 </template>

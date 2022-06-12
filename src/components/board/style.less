@@ -14,7 +14,17 @@
             background-color: #000;
         }
         &.snake {
-            background-color: #f00;
+            background-image: url("@/assets/snake_body.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            &.head {
+                background-image: url("@/assets/snake_head.png");
+                transform: rotate(-90deg);
+            }
+            &.tail {
+                background-image: url("@/assets/snake_tail.png");
+                transform: rotate(180deg);
+            }
         }
     }
 }

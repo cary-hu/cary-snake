@@ -1,18 +1,16 @@
 <template>
   <div class="statistics-container">
     <div class="current-score-block">
-      <i class="fa-solid fa-award" /> {{ currentScore }}
+      <i class="fa-solid fa-award" /> {{ statistics.currentScore }}
     </div>
     <div class="highest-score-block">
-      <i class="fa-solid fa-trophy" /> {{ highestScore }}
+      <i class="fa-solid fa-trophy" /> {{ statistics.highestScore }}
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
-
-const highestScore = ref(0);
-const currentScore = ref(0);
+import { useStatisticsStore } from "../../store/statistics";
+const statistics = useStatisticsStore();
 </script>
 
 <style lang="less" src="./style.less"></style>
